@@ -13,7 +13,7 @@
 #test
 
 #submit our job
-jobid=$(zowe zos-jobs submit data-set "solsu01.mimpds.cntl(cblrun)" --rff jobid --rft string)
+jobid=$(zowe zos-jobs submit data-set "TT6PBE1.BUILD.COBOL(RUNJCL)" --rff jobid --rft string)
 
 echo "Submitted our job, JOB ID is $jobid"
 

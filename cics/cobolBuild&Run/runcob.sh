@@ -39,4 +39,4 @@ function submitJCL () {
     done
 }
 
-submitJCL "TT6PBE1.BUILD.COBOL(COMPJCL)"
+submitJCL "TT6PBE1.BUILD.COBOL(RUNJCL)"
