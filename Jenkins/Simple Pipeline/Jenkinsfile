@@ -28,7 +28,7 @@ pipeline {
          * OUTPUTS
          * -------
          * None
-         ************************************************************************/
+                  ************************************************************************/
         stage('Setup Profile Credentials') {
             environment {
               SCRIPT = "./setup_credentials.sh"
