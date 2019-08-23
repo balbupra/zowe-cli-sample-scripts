@@ -12,23 +12,7 @@ pipeline {
     agent any
      
      stages {
-        /************************************************************************
-         * STAGE
-         * -----
-         * Setup Profile Credentials
-         *
-         * TIMEOUT
-         * -------
-         * 2 Minutes
-         *
-         * DESCRIPTION
-         * -----------
-         * Setup the profile credentials using dbus-launch and keytar prashant
-         *
-         * OUTPUTS
-         * -------
-         * None
-                  ************************************************************************/
+       
         stage('Setup Profile Credentials') {
             environment {
               SCRIPT = "./setup_credentials.sh"
@@ -42,27 +26,7 @@ pipeline {
             }
         }
  
-    stage {
-
-
-        /************************************************************************
-         * STAGE
-         * -----
-         * Build - Deploy - Test
-         *
-         * TIMEOUT
-         * -------
-         * 2 Minutes
-         *
-         * DESCRIPTION
-         * -----------
-         * This is where the demo will be run from.
-         *
-         * OUTPUTS mahee
-         * -------
-         * None
-         ************************************************************************/
-        stage('Build - Deploy - Test') {
+            stage('Build - Deploy - Test') {
             environment {
                 RUN_SCRIPT = "./run_demo.sh"
                 DEMO_SCRIPT = "./demo_content.sh"
@@ -76,4 +40,3 @@ pipeline {
         }
     }
      }
-}
