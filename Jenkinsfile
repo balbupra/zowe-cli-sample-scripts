@@ -24,12 +24,12 @@ pipeline{
                             echo " Testing started......"
                        }
                        }
-                 stage('Deployment'){
+//                 stage('Deployment'){
 //                       stage('Build - Deploy - Test') {
 //                         environment {
 //                              RUN_SCRIPT = "./run_demo.sh"
 //                              DEMO_SCRIPT = "./demo_content.sh"
-                                   }                                  
+//                                   }                                  
 //                    steps {
 //                        timeout(time: 4, unit: 'MINUTES') {
 //                              echo 'Build - Deploy - Test'
@@ -38,7 +38,7 @@ pipeline{
 //}
 //}
 //} 
-                   
-                  }
-                  }
-               } 
+//             
+//                  }
+//                  }
+          
