@@ -75,32 +75,5 @@ pipeline {
             }
         }
     }
-    // post {
-    //     /************************************************************************
-    //      * POST BUILD ACTION
-    //      *
-    //      * Sends out an email indicating the status of the build. Demo purposes
-    //      * only.
-    //      ************************************************************************/
-    //     always {
-    //         script {
-    //             def recipients = ""
-    //             def subject = "${currentBuild.currentResult}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'"
-    //             def consoleOutput = """
-    //             <p>Branch: <b>${BRANCH_NAME}</b></p>
-    //             <p>Check console output at "<a href="${RUN_DISPLAY_URL}">${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>"</p>
-    //             """
-
-    //             emailext(
-    //                     subject: subject,
-    //                     to: recipients,
-    //                     body: "Build Finished ${consoleOutput}",
-    //                     recipientProviders: [[$class: 'DevelopersRecipientProvider'],
-    //                                           [$class: 'UpstreamComitterRecipientProvider'],
-    //                                           [$class: 'CulpritsRecipientProvider'],
-    //                                           [$class: 'RequesterRecipientProvider']]
-    //             )
-    //         }
-    //     }
-    // }
-    //}
+     }
+}
