@@ -8,27 +8,29 @@
  * Copyright Contributors to the Zowe Project.                                           *
  */
 
-pipeline {
-    agent any
-     
-     stages {
-       
-        stage('Setup Profile Credentials') {
-            echo 'prashant'
-            
-        }
- 
-            stage('Build - Deploy - Test') {
-            environment {
-                RUN_SCRIPT = "./run_demo.sh"
-                DEMO_SCRIPT = "./demo_content.sh"
-            }
-            steps {
-                timeout(time: 4, unit: 'MINUTES') {
-                    echo 'Build - Deploy - Test'
-                    sh "chmod +x $RUN_SCRIPT && chmod +x $DEMO_SCRIPT && $RUN_SCRIPT"
-                }
-            }
-        }
-    }
-     }
+pipeline{
+         agent any
+                 stages{
+                       stage('Analysis'){
+                       steps{
+                            echo " Analysis started......"
+                        }
+                        }
+		      stage('Devlopment'){
+                       steps{
+                            echo " devlopment started......"
+                       }
+	               }
+                 stage('Testing'){
+                       steps{
+                            echo " Testing started......"
+                       }
+                       }
+                 stage('Deployment'){
+                       steps{
+                            echo " deployment done."
+                   
+                  }
+                  }
+                 }
+             } 
