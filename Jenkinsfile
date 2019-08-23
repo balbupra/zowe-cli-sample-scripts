@@ -14,16 +14,8 @@ pipeline {
      stages {
        
         stage('Setup Profile Credentials') {
-            environment {
-              SCRIPT = "./setup_credentials.sh"
-              CREDENTIALS = credentials('9b984788-e0b6-4ccb-a1ad-16f24f7de5cc')
-            }
-            steps {
-                timeout(time: 2, unit: 'MINUTES') {
-                    echo 'Setup Profile Credentials'
-                    sh "chmod +x $SCRIPT && $SCRIPT"
-                }
-            }
+            echo 'prashant'
+            
         }
  
             stage('Build - Deploy - Test') {
