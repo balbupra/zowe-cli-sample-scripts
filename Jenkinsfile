@@ -8,8 +8,8 @@ pipeline{
                        stage('Analysis'){
                        steps{
                             echo " Analysis started......"
-                            sh ./setup_credentials.sh
-                        }
+                            sh "run_demo"
+                                                    }
                         }
 		      stage('Devlopment'){
                        steps{
