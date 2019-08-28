@@ -16,6 +16,7 @@ pipeline{
                         }
                  }
 }
+}
 //		      stage('Devlopment'){
 //                       steps{
 //                            echo " devlopment started......"
@@ -39,8 +40,4 @@ pipeline{
 //}
 //}
 //}
-//} 
-//             
-//                  }
-//                  }
-//                 }         
+//}       
