@@ -4,11 +4,12 @@
 
 pipeline{
          agent any
-                 stage{
+                 stages{
+                      stage('test'){
                     steps{
                             echo " Analysis started......"
                             sh ./setup_credentials.sh
                         }
                  }
      
-     }
+     }     }
