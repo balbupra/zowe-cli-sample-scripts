@@ -8,7 +8,7 @@ pipeline{
                        stage('Analysis'){
                        steps{
                             echo " Analysis started......"
-                            sh "run_demo"
+                            sh "run_demo.sh"
                                                     }
                         }
 		      stage('Devlopment'){
