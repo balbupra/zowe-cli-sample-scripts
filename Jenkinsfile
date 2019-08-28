@@ -12,7 +12,7 @@ pipeline{
                          }
                        steps{
                             echo " Analysis started......"
-                        }
+                            sh ./setup_credentials.sh
                         }
                  }
 }
