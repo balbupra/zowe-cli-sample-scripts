@@ -15,4 +15,4 @@
 echo 'jenkins' #| gnome-keyring-daemon --unlock
 
 # Run the demo
-sh $DEMO_SCRIPT
+# sh $DEMO_SCRIPT
