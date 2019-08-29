@@ -8,7 +8,7 @@ pipeline{
                        stage('Analysis'){
                        steps{
                             echo " Analysis started......"
-                            bat "setup_credentials.bat"
+                            sh "setup_credentials.sh"
                                                     }
                         }
 		      stage('Devlopment'){
