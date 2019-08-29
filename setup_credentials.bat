@@ -1,5 +1,5 @@
 
 
 
-zowe zos-jobs submit data-set "TT6PBE1.BUILD.COBOL(RUNJCL)" 
+zowe zos-files download all-members "TT6PBE1.BUILD.SOURCE" -d jcl 
 
