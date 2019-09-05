@@ -1,2 +1,1 @@
-echo Hello batch
-time
+zowe files ul ftds hello.cbl "TT6PBE1.TEST.SOURCE(HELLO)"
