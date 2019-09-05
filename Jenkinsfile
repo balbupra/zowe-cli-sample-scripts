@@ -7,7 +7,7 @@ pipeline{
                  stages{
                        stage('Analysis'){
                        steps{
-                            echo " Analysis started......"
+                            echo " Analysis started for ......"
                             sh "setup_credentials.sh"
                                                     }
                         }
