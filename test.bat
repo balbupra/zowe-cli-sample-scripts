@@ -1,2 +1,2 @@
-echo "Hello bat"
-exit
+echo Hello batch
+time
