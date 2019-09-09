@@ -5,13 +5,20 @@
 pipeline{
          agent any
                  stages{
-                       stage('Analysis'){
-                       steps{
-                            echo " Analysis started for ......"
-                         //   sh "setup_credentials.sh"
-                              bat "test.bat"
-                                                }
-                        }
+                       stage('setup credentials '){
+                       environment {
+                         SCRIPT = "./setup_credentials.sh"
+                         CREDENTIALS = credentials('ZOWE-TEST') 
+                         }
+                        
+                        steps {
+                              timeout(time: 2, unit: 'MINUTES') {
+                              echo 'Setup Profile Credentials'
+                              sh "chmod +x $SCRIPT && $SCRIPT"
+                              }
+                               }
+                    }
+                                 
 		      stage('Devlopment'){
                        steps{
                             echo " devlopment started......"
