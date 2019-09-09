@@ -10,7 +10,7 @@ pipeline{
                        PATH = "C:\\Program Files\\Git\\usr\\bin"                                             
                         steps {
                               
-                                SCRIPT = "./setup_credentials.sh"
+                                sh  "setup_credentials.sh"
                                 CREDENTIALS = credentials('ZOWE-TEST') 
   
                               timeout(time: 2, unit: 'MINUTES') {
