@@ -7,7 +7,7 @@ pipeline{
                  stages{
                        stage('setup credentials '){
                        environment {
-      PATH = "C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\bin;${C:\\Program Files\\Git\\usr\\bin}"                                             
+                       PATH = "C:\\Program Files\\Git\\usr\\bin"                                             
                         steps {
                               
                                 SCRIPT = "./setup_credentials.sh"
