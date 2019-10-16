@@ -9,7 +9,7 @@ pipeline{
                            steps {
                           
                                 sh  "setup_credentials.sh"
-                              //  CREDENTIALS = credentials('ZOWE-TEST') 
+                              //  CREDENTIALS = credentials('ZOWE-TEST')
   
                              
                                }
