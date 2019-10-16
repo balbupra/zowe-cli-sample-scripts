@@ -1,1 +1,3 @@
-zowe files ul ftds hello.cbl "TT6PBE1.TEST.SOURCE(HELLO)"
+echo on
+echo "Hello World" 
+echo off
