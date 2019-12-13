@@ -8,7 +8,7 @@ pipeline{
                        stage('setup credentials '){
                            steps {
                               
-                               sh 'ls -l'
+                               sh './setup_credentials'
                            
                          
                               }
