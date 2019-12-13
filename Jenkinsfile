@@ -9,8 +9,8 @@ pipeline{
                            steps {
                               
                                sh 'ls -l'
-                               
-                          
+                           
+                         
                               }
                     }
                                  
