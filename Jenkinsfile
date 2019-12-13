@@ -9,8 +9,7 @@ pipeline{
                            steps {
                               
                                sh './setup_credentials'
-                           
-                         
+                                                    
                               }
                     }
                                  
