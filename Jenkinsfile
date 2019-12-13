@@ -8,10 +8,8 @@ pipeline{
                        stage('setup credentials '){
                            steps {
                               
-                               bat "test.bat"
-                               //sh  "setup_credentials.sh"
-                              //  CREDENTIALS = credentials('ZOWE-TEST')
-  
+                               sh  "setup_credentials.sh"
+                               
                           
                               }
                     }
