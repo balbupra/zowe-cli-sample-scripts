@@ -9,7 +9,7 @@ pipeline{
                            steps {
                               
                                echo " setup credentials......"
-                                 sh  "./setup_credentials.sh"
+                                 sh  "./test.sh"
                               
 
                               }
