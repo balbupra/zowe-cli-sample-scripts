@@ -8,7 +8,11 @@ pipeline{
                        stage('setup credentials '){
                            steps {
                               
-                               echo " setup credentials......"                                                    
+                               echo " setup credentials......"
+                              SCRIPT = "./setup_credentials.sh"
+                              CREDENTIALS = credentials('zowe-playground')
+
+
                               }
                     }
                                  
