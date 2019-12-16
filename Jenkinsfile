@@ -14,7 +14,7 @@ pipeline{
                            steps {
                          node(label: 'jenkins-slave.mfdevopscoe.mfdevops.tds.tieto.com-b505f898')
                          {
-                              submit job "TT6PBE1.BUILD.COBOL(COMPJCL)"
+                             sh = ./compcbl.sh
 
 
                          }  
