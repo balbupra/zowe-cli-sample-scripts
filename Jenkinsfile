@@ -8,7 +8,9 @@ pipeline{
                        stage('setup credentials '){
                            steps {
                               
-                               echo " setup credentials......"
+                               echo " setup credentials for zowe ....."  
+
+
                                  sh  "./test.sh"
                               
 
