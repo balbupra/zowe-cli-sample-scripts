@@ -12,9 +12,10 @@ pipeline{
                  stages{
                        stage('setup credentials '){
                            steps {
-                              node(label: 'jenkins-slave.mfdevopscoe.mfdevops.tds.tieto.com-b505f898')
+                         node(label: 'jenkins-slave.mfdevopscoe.mfdevops.tds.tieto.com-b505f898')
+                         {
                             zowe zosmf check status
-                            
+                         }  
                            }
                    }
                     }
