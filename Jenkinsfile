@@ -14,7 +14,7 @@ pipeline{
                            steps {
                          node(label: 'jenkins-slave.mfdevopscoe.mfdevops.tds.tieto.com-b505f898')
                          {
-                             sh = ./compcbl.sh
+                             sh = ./test.sh
 
 
                          }  
