@@ -15,8 +15,9 @@ pipeline{
                        stage('setup credentials '){
                            steps {
                               
-                               echo " setup credentials for zowe ....."  
-
+                              echo " setup credentials for zowe ....."  
+                              node(label: 'jenkins-slave.mfdevopscoe.mfdevops.tds.tieto.com-b505f898')
+                           }
 
                                  sh  "./test.sh"
                               
