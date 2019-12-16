@@ -3,7 +3,14 @@
  */
 
 pipeline{
-         agent any
+          agent { 
+             node{
+            label 'master' 
+            customWorkspace '/home/swainkir/JenkinsJob/Zowe'
+           
+             }
+             } 
+
                  stages{
                        stage('setup credentials '){
                            steps {
