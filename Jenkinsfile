@@ -12,9 +12,9 @@ pipeline{
                  stages{
                        stage('setup credentials '){
                            steps {
-                              
                               node(label: 'jenkins-slave.mfdevopscoe.mfdevops.tds.tieto.com-b505f898')
-                              zowe files download ds "TT6PBE1.BUILD.COBOL(COMPJCL)"
+                            zowe zosmf check status
+                            
                            }
                    }
                     }
