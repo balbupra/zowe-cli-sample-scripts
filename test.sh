@@ -20,5 +20,4 @@ done;
 echo "Job completed in OUTPUT status. Final result of job: "
 zowe zos-jobs view job-status-by-jobid "$jobid"
 zowe zos-jobs list spool-files-by-jobid "$jobid"
-zowe zos-jobs view sfbi "$jobid" 4
 zowe zos-jobs view sfbi "$jobid" 106
