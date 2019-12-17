@@ -1,25 +1,26 @@
-/*
- TEST Mainframe Pipeline
- */
-
 pipeline{
-     agent { 
-        node{
-            label 'master' 
-            customWorkspace '/home/swainkir/JenkinsJob/Zowe'
-                  }
-                 } 
+         agent any
                  stages{
-                       stage('setup test  credentials '){
-                           steps {
-                         node(label: 'jenkins-slave.mfdevopscoe.mfdevops.tds.tieto.com-b505f898')
-                         {
-                             sh = ./test.sh
-
-
-                         }  
-                           }
-                   }
-                    }
-              }
-              
+                       stage('Analysis'){
+                       steps{
+                            echo " Analysis started......"
+                        }
+                        }
+		      stage('Devlopment'){
+                       steps{
+                            echo " devlopment started......"
+                       }
+	               }
+                 stage('Testing'){
+                       steps{
+                            echo " Testing started......"
+                       }
+                       }
+                 stage('Deployment'){
+                       steps{
+                            echo " deployment done."
+                   
+                  }
+                  }
+                 }
+             } 
