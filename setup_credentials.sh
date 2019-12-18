@@ -5,7 +5,7 @@ echo 'jenkins' #| gnome-keyring-daemon --unlock
 
 
 # Create the Profile (move this to the credential stuff)
-bright profiles create zosmf tso1 --192.49.207.105 --port 443 -u tt6pbe1 -p Prashu99 --no-ru
+bright profiles create zosmf tso1 --192.49.207.105 --port 443 -user tt6pbe1 -pass Prashu99 --no-ru
 #zowe profiles create zosmf  --host tso1 --port 443 -u tt6pbe1 -p Prashu99 --no-ru
 #bright profiles create endevor endtso1 --host tso1 --port 50002 --user $CREDENTIALS_USR --pass $CREDENTIALS_PSW --prot http
 #bright profiles create endevor endca31 --host usilca31 --port 47400 --user $CREDENTIALS_USR --pass $CREDENTIALS_PSW --prot http
