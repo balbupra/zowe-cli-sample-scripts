@@ -1,19 +1,12 @@
-//TT6PBE1C JOB TEDEVGRP,PBE,CLASS=A,REGION=32M,MSGCLASS=1,    
-//             MSGLEVEL=(1,1),NOTIFY=TT6PBE1                             
-//STEP1     EXEC  PGM=IGYCRCTL                             
-//SYSPRINT  DD  SYSOUT=*                                   
-//SYSIN     DD  DSN=TT6PBE1.BUILD.COBOL(HELLO),DISP=SHR   
-//SYSUT1    DD  UNIT=SYSDA,SPACE=(CYL,(2,2))               
-//SYSUT2    DD  UNIT=SYSDA,SPACE=(CYL,(2,2))               
-//SYSUT3    DD  UNIT=SYSDA,SPACE=(CYL,(2,2))               
-//SYSUT4    DD  UNIT=SYSDA,SPACE=(CYL,(2,2))               
-//SYSUT5    DD  UNIT=SYSDA,SPACE=(CYL,(2,2))               
-//SYSUT6    DD  UNIT=SYSDA,SPACE=(CYL,(2,2))               
-//SYSUT7    DD  UNIT=SYSDA,SPACE=(CYL,(2,2))               
-//SYSLIN    DD  DSN=&&FCB,DISP=(NEW,PASS)                  
-//LINK1     EXEC PGM=IEWL,COND=(4,LT,STEP1)                
-//SYSLIN    DD  DSN=&&FCB,DISP=(OLD,DELETE)                
-//SYSLIB    DD DSN=CEE.SCEELKED,DISP=SHR                  
-//SYSPRINT  DD  SYSOUT=*                                   
-//LKED.SYSLMOD   DD  DSN=TT6PBE1.BUILD.LOAD(HELLO),DISP=SHR
-//*SYSIN     DD  DUMMY                                    
+# Unlock the keyring
+echo 'jenkins' #| gnome-keyring-daemon --unlock
+
+zowe profiles create zosmf-profile prashuzowe --host 192.49.207.105 --port 4035 --tt6pbe1 --password Prashu99
+
+
+# Create the Profile (move this to the credential stuff)
+#bright profiles create zosmf tso1 --host tso1 --port 443 -u $CREDENTIALS_USR -p $CREDENTIALS_PSW --no-ru
+#zowe profiles create zosmf  --host tso1 --port 443 -u tt6pbe1 -p Prashu99 --no-ru
+#bright profiles create endevor endtso1 --host tso1 --port 50002 --user $CREDENTIALS_USR --pass $CREDENTIALS_PSW --prot http
+#bright profiles create endevor endca31 --host usilca31 --port 47400 --user $CREDENTIALS_USR --pass $CREDENTIALS_PSW --prot http
+#bright profiles create fmp fmpca32 --host ca32.ca.com --port 19871 --user $CREDENTIALS_USR --pass $CREDENTIALS_PSW --protocol http --ru false
