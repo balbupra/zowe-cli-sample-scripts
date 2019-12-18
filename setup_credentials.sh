@@ -1,7 +1,7 @@
 # Unlock the keyring
 echo 'jenkins' #| gnome-keyring-daemon --unlock
-
-zowe profiles create zosmf-profile prashuzowe --host 192.49.207.105 --port 4035 --tt6pbe1 --password Prashu99
+#zowe: /mnt/c/Users/balbupra/AppData/Roaming/npm/zowe /mnt/c/Users/balbupra/AppData/Roaming/npm/zowe.cmd
+ /mnt/c/Users/balbupra/AppData/Roaming/npm/zowe profiles create zosmf-profile prashuzowe --host 192.49.207.105 --port 443 --tt6pbe1 --password Prashu99
 
 
 # Create the Profile (move this to the credential stuff)
