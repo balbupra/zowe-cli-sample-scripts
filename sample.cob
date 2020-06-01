@@ -1,4 +1,3 @@
-      *****************************************************************
        IDENTIFICATION DIVISION.
        PROGRAM-ID. SAM1.
        ENVIRONMENT DIVISION.
