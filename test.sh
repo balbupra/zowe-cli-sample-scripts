@@ -3,10 +3,10 @@
 echo "Welcome to the open source Mainframe World"
 #Compile Mainframe job
 echo "Compile mainframe program"
-jobid=$(zowe zos-jobs submit data-set "TT6PBE1.BUILD.COBOL(COMPJCL)" --rff jobid --rft string)
+jobid=$(zowe zos-jobs submit data-set "TT6PBE1.TEST.SOURCE(COMPJCL)" --rff jobid --rft string)
 echo "Job Submitted for compilation, JOB ID is $jobid"
 echo "Run Mainframe job"
-jobid=$(zowe zos-jobs submit data-set "TT6PBE1.BUILD.COBOL(RUNJCL)" --rff jobid --rft string)
+jobid=$(zowe zos-jobs submit data-set "TT6PBE1.TEST.SOURCE(RUNJCL)" --rff jobid --rft string)
 echo "Submitted our job, JOB ID is $jobid"
 #wait for it to go to output
 status="UNKNOWN"
